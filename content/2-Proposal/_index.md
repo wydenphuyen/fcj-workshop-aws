@@ -1,115 +1,82 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-04-20
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
 {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
+⚠️ **Note:** Thông tin dưới đây dùng để tham khảo. Vui lòng không sao chép nguyên văn hoàn toàn cho báo cáo của bạn.
 {{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+Trong phần này, bạn cần tổng hợp nội dung của hội thảo/đề án mà bạn **dự định** thực hiện.
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# Ứng dụng Web Quy mô Doanh nghiệp trên nền tảng AWS
+## Giải pháp Kiến trúc 3-Tier Hợp nhất đảm bảo Tính sẵn sàng cao và Hiệu năng vượt trội
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+### 1. Tóm tắt điều hành (Executive Summary)
+Ứng dụng Web Quy mô Doanh nghiệp được thiết kế nhằm cung cấp một nền tảng số hóa mạnh mẽ, có tính sẵn sàng cao và bảo mật. Hệ thống tận dụng kiến trúc 3 tầng (3-tier architecture) tiêu chuẩn được triển khai trên Amazon Web Services (AWS), sử dụng **Amazon S3** để lưu trữ tĩnh Frontend, **Amazon EC2** kết hợp với **Auto Scaling Groups (ASG)** và **Application Load Balancer (ALB)** để xử lý Backend động (Node.js/Express), cùng với **Amazon RDS** (Cơ sở dữ liệu quan hệ) kết hợp **Amazon DynamoDB** (NoSQL) để lưu trữ dữ liệu toàn diện. Hiệu năng và bảo mật được tối ưu hóa thông qua **Amazon CloudFront (CDN)**, **Route 53 (DNS)**, **CloudWatch (Monitoring)** và **AWS WAF**.
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+### 2. Phát biểu bài toán (Problem Statement)
+### Vấn đề gặp phải
+Các ứng dụng web nguyên khối truyền thống lưu trữ trên một máy chủ đơn lẻ thường gặp phải các điểm nghẽn về khả năng mở rộng, điểm lỗi đơn (single point of failure) khi lượng truy cập tăng vọt, độ trễ cao đối với người dùng toàn cầu, và thiếu tính năng giám sát tập trung cũng như kiểm soát bảo mật tự động. Việc quản lý mở rộng hạ tầng và triển khai thủ công kém hiệu quả và dễ xảy ra sai sót.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+### Giải pháp
+Dự án triển khai kiến trúc đám mây 3 tầng có khả năng phục hồi cao trên AWS. Tài sản Frontend được phân phối toàn cầu thông qua Amazon S3 và CloudFront. Các tác vụ Backend chạy trên các máy chủ EC2 có thể mở rộng được quản lý bởi Auto Scaling Group đằng sau Application Load Balancer. Dữ liệu quan hệ được bảo mật trong Amazon RDS nằm trong Private Subnet, trong khi dữ liệu phi cấu trúc được quản lý qua DynamoDB và các S3 bucket chuyên dụng. Hệ thống giám sát toàn diện được thiết lập bằng CloudWatch và cảnh báo SNS, đảm bảo hiệu năng cao, chịu lỗi tốt và tối ưu chi phí.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+### Lợi ích và Hiệu quả đầu tư
+Giải pháp thiết lập một bản mẫu hạ tầng chuẩn sản xuất, đóng vai trò là khung mẫu có khả năng mở rộng cho các ứng dụng hiện đại. Nó tự động hóa định tuyến lưu lượng, mở rộng tài nguyên và quản lý chuyển đổi dự phòng (failover), giúp giảm đáng kể sự can thiệp thủ công và chi phí vận hành. Bảo mật được tăng cường thông qua việc cô lập VPC, Security Groups và bảo vệ bằng WAF. Nhìn chung, kiến trúc đạt được hiệu suất sử dụng tài nguyên tối ưu và chi phí tiết kiệm phù hợp cho môi trường vận hành thực tế.
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+### 3. Kiến trúc giải pháp (Solution Architecture)
+Nền tảng sử dụng kiến trúc AWS đa tầng. Các yêu cầu từ người dùng được quản lý thông qua Amazon Route 53 và tăng tốc bằng Amazon CloudFront. Nội dung tĩnh được phân phối qua S3, trong khi các yêu cầu API động đi đến Application Load Balancer, bộ phân phối lưu lượng truy cập này sẽ chia tải qua các EC2 instance bên trong Private Subnet được hỗ trợ bởi Auto Scaling. Các thao tác cơ sở dữ liệu được xử lý an toàn thông qua Amazon RDS và DynamoDB.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+### Các dịch vụ AWS được sử dụng
+* **Amazon S3**: Lưu trữ tài nguyên tĩnh Frontend và quản lý kho lưu trữ tải lên/tải xuống tệp của người dùng.
+* **Amazon EC2**: Chạy các máy chủ ứng dụng Backend bên trong các subnet riêng tư (private subnets).
+* **Application Load Balancer (ALB)**: Phân phối lưu lượng HTTP/HTTPS đến giữa các EC2 instance.
+* **Auto Scaling Group (ASG)**: Tự động điều chỉnh dung lượng tính toán dựa trên các chỉ số tải công việc.
+* **Amazon RDS**: Quản lý khối lượng công việc cơ sở dữ liệu quan hệ một cách an toàn.
+* **Amazon DynamoDB**: Xử lý lưu trữ dữ liệu NoSQL hiệu suất cao.
+* **Amazon CloudFront**: Đóng vai trò là CDN để phân phối nội dung toàn cầu nhanh chóng.
+* **Amazon Route 53**: Xử lý phân giải tên miền và định tuyến DNS.
+* **Amazon CloudWatch & SNS**: Cung cấp tính năng giám sát hệ thống, số liệu và gửi cảnh báo email tự động.
+* **AWS WAF & Security Groups**: Bảo vệ và an toàn vòng đài mạng chống lại các truy cập độc hại.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+### Thiết kế thành phần
+* **Tầng Frontend**: Giao diện mẫu hoặc mã nguồn lưu trữ trên S3 và phân phối qua CloudFront.
+* **Tầng Mạng (Networking)**: VPC tùy chỉnh với Public và Private Subnets, Internet Gateway và NAT Gateway.
+* **Tầng Tính toán (Compute)**: Các EC2 instance được cấu hình phía sau ALB và quản lý bởi ASG.
+* **Tầng Cơ sở dữ liệu**: Các Multi-AZ RDS instance và bảng DynamoDB được cô lập trong private subnets.
+* **Giám sát & Bảo mật**: Cảnh báo CloudWatch liên kết với các chủ đề SNS để quản lý sự cố chủ động.
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+### 4. Triển khai kỹ thuật (Technical Implementation)
+**Các giai đoạn triển khai**
+* Giai đoạn 1: Phân tích yêu cầu, thiết kế mạng (VPC, Subnets) và thiết lập bảo mật IAM (Tháng 1).
+* Giai đoạn 2: Triển khai tính toán (EC2, ALB, ASG) và khởi tạo cơ sở dữ liệu (RDS, DynamoDB) (Tháng 2).
+* Giai đoạn 3: Tích hợp phân phối nội dung (CloudFront, Route 53) và thiết lập giám sát (CloudWatch, SNS) (Tháng 3).
+* Giai đoạn 4: Tích hợp hệ thống, kiểm thử tự động (Unit/Automation tests) và ra mắt sản xuất (Tháng 3).
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+**Yêu cầu kỹ thuật**
+* Hạ tầng đám mây: Tài khoản AWS được cấu hình với các IAM role, định tuyến VPC và security group phù hợp.
+* Môi trường Backend: Ứng dụng Node.js/Express chạy trên Linux EC2 instance, tích hợp điểm kiểm tra `/health` phục vụ cho kiểm tra sức khỏe của ALB.
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+### 5. Lộ trình & Mốc thời gian (Timeline & Milestones)
+* **Tuần 1 - 2**: Thiết lập mạng (VPC, subnet, IAM, S3 static hosting).
+* **Tuần 3 - 4**: Thiết lập tính toán và mở rộng (EC2, ALB, Auto Scaling Group).
+* **Tuần 5 - 6**: Tích hợp cơ sở dữ liệu (RDS, DynamoDB, quản lý tệp S3).
+* **Tuần 7 - 8**: Cấu hình CDN và DNS (CloudFront, Route 53).
+* **Tuần 9 - 10**: Giám sát, ghi nhật ký và bảo mật (CloudWatch, SNS, WAF).
+* **Tuần 11 - 12**: Kiểm thử tích hợp toàn diện, tối ưu hóa hiệu năng và hoàn thiện báo cáo.
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+### 6. Ước tính ngân sách (Budget Estimation)
+* Hạ tầng được tối ưu hóa cho AWS Free Tier và các loại instance chi phí thấp (t3.micro/t4g.micro, sử dụng tối thiểu RDS/DynamoDB, cùng với các bậc truyền dữ liệu chuẩn của S3/CloudFront) nhằm đảm bảo hoạt động cực kỳ tiết kiệm kinh tế.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+### 7. Đánh giá rủi ro (Risk Assessment)
+#### Ma trận rủi ro & Biện pháp giảm thiểu
+* **Sự cố mạng / Lưu lượng tăng vột**: Giảm thiểu bằng cách triển khai Multi-AZ, Auto Scaling Groups và bộ nhớ đệm CloudFront.
+* **Điểm nghẽn cơ sở dữ liệu**: Giảm thiểu bằng cách tinh chỉnh chỉ mục (index tuning) và mở rộng quy mô RDS.
+* **Vi phạm bảo mật**: Giảm thiểu bằng các quy tắc Security Group nghiêm ngặt, cô lập subnet riêng tư và bảo vệ bằng WAF.
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
-
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
-
-Total: $0.7/month, $8.40/12 months
-
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
-
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
-
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
-
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
-
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+### 8. Kết quả kỳ vọng (Expected Outcomes)
+* Một ứng dụng web 3 tầng hoạt động đầy đủ, có tính sẵn sàng cao và bảo mật được triển khai thành công trên AWS.
+* Tài liệu kỹ thuật toàn diện và hệ thống giám sát tự động đảm bảo khả năng duy trì bảo trì và độ tin cậy về hiệu năng lâu dài.
