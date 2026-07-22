@@ -1,5 +1,5 @@
 ---
-title : "Chuẩn bị môi trường (Prerequisites)"
+title : "Prerequisites"
 date : 2026-07-22 
 weight : 2 
 chapter : false

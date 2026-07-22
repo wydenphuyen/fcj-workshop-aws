@@ -1,18 +1,19 @@
 ---
-title : "Access S3 from VPC"
-date : 2024-01-01
-weight : 3
+title : "Thiết lập Database (MongoDB)"
+date : 2026-07-22 
+weight : 3 
 chapter : false
-pre : " <b> 5.3. </b> "
+pre: " <b> 5.3. </b> "
 ---
 
-#### Using Gateway endpoint
+### Cài đặt và cấu hình MongoDB trên EC2
 
-In this section, you will create **a Gateway eendpoint** to access **Amazon S3** from **an EC2 instance**. **The Gateway endpoint** will allow upload an object to S3 buckets without using **the Public Internet**. To create an endpoint, you must specify the VPC in which you want to create the endpoint, and the service (in this case, S3) to which you want to establish the connection.
+Thiết lập cơ sở dữ liệu trên máy chủ **Engademy-MongoDB** nằm trong Private Subnet (không có Public IP) để bảo mật tối đa cho hệ thống.
 
-![overview](/images/5-Workshop/5.3-S3-vpc/diagram2.png)
+#### 1. Kết nối vào máy chủ Database
+Sử dụng máy chủ Backend làm Bastion Host để kết nối SSH vào máy chủ Database thông qua Private IP:
 
-#### Content
+```bash
+ssh -i "engademy-key.pem" ubuntu@10.0.142.235
 
-- [Create gateway endpoint](3.1-create-gwe/)
-- [Test gateway endpoint](3.2-test-gwe/)
+![Trạng thái MongoDB active running](/fcj-workshop-aws/images/5-Workshop/5.3-S3-vpc/3.png)
