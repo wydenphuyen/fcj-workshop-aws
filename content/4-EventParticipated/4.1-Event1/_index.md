@@ -1,6 +1,6 @@
 ---
-title: "Event 1: Giới thiệu về chương trình AWS và Định hướng Phát triển"
-date: 2026-09-05
+title: "Event 1"
+date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
@@ -10,48 +10,95 @@ pre: " <b> 4.1. </b> "
 
 # Summary Report: Giới thiệu về chương trình AWS và Định hướng Phát triển
 
-### Thông tin sự kiện
-- **Tên sự kiện:** Giới thiệu về chương trình AWS và Định hướng Phát triển
-- **Ngày diễn ra:** 05/09/2026
-- **Vai trò:** Người tham dự (Attendee)
+### Event Objectives
 
-### Mục tiêu sự kiện
-- Cung cấp cái nhìn toàn diện về lộ trình chương trình thực tập và phát triển năng lực công nghệ điện toán đám mây.
-- Giới thiệu tầm quan trọng, xu hướng dịch chuyển công nghệ lên nền tảng AWS trong môi trường doanh nghiệp hiện đại.
-- Định hướng rõ ràng các kỹ năng cốt lõi và lộ trình thực hiện đồ án, dự án tốt nghiệp cho sinh viên ngành Công nghệ phần mềm.
+- Cung cấp cái nhìn toàn diện về lộ trình chương trình thực tập First Cloud AI Journey.
+- Giới thiệu tầm quan trọng và xu hướng dịch chuyển công nghệ lên nền tảng AWS trong doanh nghiệp hiện đại.
+- Định hướng các kỹ năng cốt lõi và lộ trình thực hiện đồ án tốt nghiệp cho sinh viên ngành Công nghệ phần mềm.
+- Hướng dẫn phương pháp tiếp cận tài nguyên học tập và công cụ hỗ trợ phát triển trên đám mây.
 
-### Nội dung chính
+### Speakers
 
-#### 1. Tổng quan về hệ sinh thái và dịch vụ AWS
-- Giới thiệu cấu trúc hạ tầng toàn cầu của Amazon Web Services (AWS).
-- Tìm hiểu các nhóm dịch vụ cốt lõi phục vụ phát triển ứng dụng web: dịch vụ tính toán (EC2), lưu trữ (S3), cơ sở dữ liệu (RDS) và mạng ảo (VPC).
+- **Ban Quản Lý Chương Trình** – Đội ngũ điều phối First Cloud AI Journey
+- **Chuyên gia Giải pháp Cloud** – Solutions Architect từ đối tác AWS khu vực
+- **Cố vấn kỹ thuật dự án** – Giảng viên và chuyên gia hướng dẫn đồ án
 
-#### 2. Định hướng lộ trình thực tập và phát triển kỹ năng
-- Nắm bắt các mốc thời gian và yêu cầu trọng tâm trong suốt quá trình tham gia chương trình.
-- Định hướng phương pháp tiếp cận công nghệ theo tiêu chuẩn thực tế tại doanh nghiệp (Industry Standards).
-- Hướng dẫn cách phân chia các tầng kiến trúc hệ thống (Frontend, Backend, Database) nhằm chuẩn bị cho việc xây dựng đồ án.
+### Key Highlights
 
-#### 3. Phương pháp học tập và làm việc hiệu quả trên Cloud
-- Chia sẻ kinh nghiệm từ các chuyên gia về cách tối ưu hóa thời gian nghiên cứu tài liệu chính thống của AWS.
-- Lưu ý về các quy tắc bảo mật cơ bản và quản lý chi phí khi vận hành tài nguyên trên đám mây.
+#### Thách thức khi tiếp cận hệ thống công nghệ hiện đại
 
----
+- Thiếu định hướng cấu trúc → Dẫn đến việc thiết kế hệ thống chồng chéo, khó mở rộng  
+- Bỡ ngỡ với môi trường Cloud → Hiệu suất khai thác tài nguyên thấp, chi phí vận hành cao  
+- Chưa nắm vững tiêu chuẩn bảo mật → Dễ gặp rủi ro về phân quyền và an toàn dữ liệu  
 
-### Giá trị thu được & Bài học cốt lõi
+#### Định hướng lộ trình tổng quan – Chương trình thực tập 12 tuần
 
-#### Định hướng tư duy kỹ thuật
-- Hiểu rõ lý do tại sao các doanh nghiệp công nghệ lớn lại lựa chọn điện toán đám mây thay vì hạ tầng máy chủ vật lý truyền thống.
-- Xây dựng tư duy thiết kế hệ thống có tính sẵn sàng cao (High Availability) và khả năng mở rộng linh hoạt (Scalability).
+Xây dựng nền tảng vững chắc theo mô hình chuẩn doanh nghiệp, tập trung vào ba trục chính:
 
-#### Chuẩn bị cho dự án cá nhân / Đồ án tốt nghiệp
-- Định hình được sơ đồ kiến trúc tổng quan mà dự án web cần hướng tới (ví dụ: mô hình 3 tầng với VPC, Public/Private Subnet).
-- Nắm bắt phương pháp quản lý mã nguồn và triển khai tự động hóa thông qua các công cụ CI/CD tích hợp trên nền tảng Cloud.
+- **Hạ tầng mạng (Networking)**: Thiết lập VPC, Subnet, Route Table an toàn  
+- **Tính toán & Lưu trữ (Compute & Storage)**: Quản lý máy chủ ảo EC2, Auto Scaling và cơ sở dữ liệu RDS  
+- **Quản lý tiến độ**: Phối hợp nhóm hiệu quả qua các công cụ quản lý dự án  
 
-### Trải nghiệm tham gia sự kiện
+#### Hệ sinh thái và Dịch vụ cốt lõi của AWS
 
-Tham gia buổi giới thiệu và định hướng đã giúp tôi gỡ bỏ nhiều thắc mắc ban đầu khi tiếp cận với môi trường công nghệ điện toán đám mây quy mô lớn. Sự kiện mang lại những góc nhìn thực tế, giúp tôi vạch ra kế hoạch cụ thể cho từng giai đoạn của kỳ thực tập cũng như việc hoàn thiện cấu trúc hệ thống cho đồ án sắp tới.
+- **Nhóm dịch vụ tính toán**: Từ Amazon EC2 đến các giải pháp Container và Serverless  
+- **Mô hình bảo mật nền tảng**: Hiểu rõ trách nhiệm phân tầng trong bảo mật đám mây  
+- **Công cụ hỗ trợ phát triển**: Tận dụng các dịch vụ giám sát và tối ưu hóa hệ thống  
 
-#### Hình ảnh sự kiện
-*(Thêm hình ảnh sự kiện của bạn tại đây)*
+#### Phương pháp tiếp cận và triển khai đồ án
 
-> **Đánh giá chung:** Buổi sự kiện đóng vai trò là kim chỉ nam quan trọng, giúp tôi định hình rõ ràng mục tiêu học tập, nắm bắt đúng xu hướng công nghệ và tự tin hơn trong suốt quá trình triển khai các nội dung thực tập tiếp theo.
+- **Xác định mục tiêu rõ ràng**: Bắt đầu từ yêu cầu nghiệp vụ thực tế thay vì chỉ tập trung vào công nghệ đơn thuần  
+- **Tuân thủ quy chuẩn thiết kế**: Áp dụng mô hình kiến trúc nhiều tầng (3-tier architecture) cho ứng dụng web  
+- **Quản lý mã nguồn và tài nguyên**: Đồng bộ hóa quy trình phát triển từ nội bộ lên môi trường Cloud  
+
+### Key Takeaways
+
+#### Tư duy hệ thống (System Mindset)
+
+- **Cloud-first approach**: Luôn ưu tiên thiết kế hệ thống có tính sẵn sàng cao (High Availability) và khả năng mở rộng tự động (Scalability)  
+- **Phân tách rõ ràng**: Tách biệt luồng xử lý giữa Frontend, Backend và Database để dễ bảo trì  
+- **Bảo mật từ gốc (Security by Design)**: Đưa các yếu tố bảo mật vào ngay từ giai đoạn phác thảo kiến trúc  
+
+#### Kỹ thuật triển khai (Technical Execution)
+
+- Nắm vững cách thiết lập mạng ảo riêng tư (Private Subnet) để bảo vệ các thành phần nhạy cảm của hệ thống  
+- Áp dụng các nguyên tắc quản lý cấu hình và tối ưu hóa tài nguyên phần cứng trên đám mây  
+- Xây dựng tài liệu kỹ thuật rõ ràng, mạch lạc phục vụ cho công tác báo cáo đồ án tốt nghiệp  
+
+#### Chiến lược học tập (Learning Strategy)
+
+- **Tiếp cận theo giai đoạn**: Không vội vàng, tuân thủ đúng lộ trình từng tuần của chương trình  
+- **Chủ động nghiên cứu tài liệu**: Khai thác tối đa tài liệu chính thống và các tài nguyên hướng dẫn từ AWS  
+- **Tăng cường thảo luận**: Trao đổi thường xuyên với Mentor và các thành viên trong đội ngũ để tháo gỡ vướng mắc kỹ thuật  
+
+### Applying to Work
+
+- **Xây dựng sơ đồ kiến trúc**: Áp dụng kiến thức định hướng để hoàn thiện sơ đồ mạng và hạ tầng cho đồ án web cá nhân  
+- **Triển khai phân vùng mạng**: Thiết lập Public Subnet và Private Subnet chính xác theo chuẩn hướng dẫn  
+- **Cấu hình dịch vụ cốt lõi**: Đưa các thành phần Backend (Node.js/Express) và Database vào môi trường vận hành an toàn trên AWS  
+- **Tối ưu hóa quy trình làm việc**: Cải thiện cách quản lý mã nguồn, cấu hình biến môi trường và tài nguyên lưu trữ  
+
+### Event Experience
+
+Tham gia buổi **“Giới thiệu về chương trình AWS và Định hướng Phát triển”** mang lại giá trị thiết thực, giúp tôi định hình rõ ràng bức tranh toàn cảnh về kỳ thực tập cũng như yêu cầu kỹ thuật của đồ án tốt nghiệp. Những trải nghiệm nổi bật bao gồm:
+
+#### Lắng nghe chia sẻ định hướng từ chuyên gia
+- Ban tổ chức và các chuyên gia AWS đã cung cấp những góc nhìn thực tế về nhu cầu tuyển dụng và tiêu chuẩn kỹ thuật tại doanh nghiệp.  
+- Hiểu rõ tầm quan trọng của việc làm chủ công nghệ điện toán đám mây đối với sinh viên ngành Công nghệ phần mềm.  
+
+#### Trang bị kiến thức nền tảng vững chắc
+- Nắm bắt được cấu trúc tổng quan của một hệ thống web hiện đại triển khai trên AWS.  
+- Xác định rõ các mốc thời gian, nhiệm vụ trọng tâm cần thực hiện trong suốt 12 tuần thực tập.  
+
+#### Giải tỏa vướng mắc ban đầu
+- Được giải đáp chi tiết về cách tiếp cận các dịch vụ Cloud phức tạp một cách đơn giản, dễ hiểu.  
+- Xây dựng sự tự tin và thái độ chủ động trong việc nghiên cứu và hoàn thành các phần tiếp theo của đồ án.  
+
+#### Lessons learned
+- Việc nắm rõ định hướng ngay từ đầu giúp tiết kiệm đáng kể thời gian và tránh đi lạc hướng trong quá trình triển khai thực tế.  
+- Sự kết hợp chặt chẽ giữa lý thuyết định hướng và thực hành hạ tầng là chìa khóa quyết định sự thành công của đồ án tốt nghiệp.  
+
+#### Some event photos
+*Add your event photos here*  
+
+> Overall, sự kiện khởi đầu này không chỉ cung cấp định hướng rõ ràng về lộ trình thực tập mà còn giúp tôi củng cố tư duy thiết kế hệ thống, tạo tiền đề vững chắc để hoàn thành xuất sắc các mục tiêu đề ra trong đồ án tốt nghiệp.
