@@ -6,121 +6,116 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+
+# Summary Report: “Cloud Security & Best Practices Workshop”
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Share best practices in cloud security and compliance
+- Introduce the Shared Responsibility Model and defense-in-depth strategies
+- Provide guidance on securing network boundaries and isolating workloads
+- Present tools for threat detection, monitoring, and IAM governance
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Alex Rivera** – Principal Cloud Security Architect, AWS
+- **Sarah Chen** – Senior Security Compliance Specialist
+- **Minh Hoàng** – Cloud Security Engineer, AWS Partner Network
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### Identifying the drawbacks of legacy security architecture
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- Hardcoded credentials and secrets → High risk of unauthorized access and data leaks  
+- Flat network structures without isolation → Lateral movement for attackers after a perimeter breach  
+- Non-compliance with data protection regulations → Security breaches, regulatory penalties, and loss of reputation  
 
-#### Transitioning to modern application architecture – Microservices
+#### Transitioning to secure application architecture – Defense-in-Depth
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+Implementing a multi-layered security system — protecting workloads at every level from network perimeter to data storage, built on three core pillars:
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+- **Network Isolation**: Restricting traffic via Private Subnets and Security Groups  
+- **Identity Governance**: Enforcing least privilege and robust authentication  
+- **Data Protection**: Encrypting sensitive information both at rest and in transit  
 
-#### Domain-Driven Design (DDD)
+#### Shared Responsibility Model
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+- **Division of responsibilities**: AWS secures the infrastructure *of* the cloud, while customers secure what is *in* the cloud  
+- **Customer ownership**: Responsibility over operating systems, network configuration, firewall rules, and data encryption  
+- **Compliance alignment**: Meeting global security standards through built-in cloud compliance frameworks  
 
-#### Event-Driven Architecture
+#### Network Security & Isolation
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+- **VPC Architecture**: Separating public resources (ALB, NAT Gateway) from private backend servers and databases  
+- **Perimeter Protection**: Utilizing AWS WAF to block common web exploits like SQL injection and cross-site scripting  
+- **Traffic Control**: Fine-tuning Security Groups and Network ACLs to inspect inbound and outbound traffic  
 
-#### Compute Evolution
+#### Identity and Access Management (IAM)
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+- **Principle of Least Privilege**: Granting only the permissions necessary to perform specific tasks  
+- **IAM Roles over Access Keys**: Eliminating hardcoded credentials by attaching roles directly to compute instances  
+- **Multi-Factor Authentication (MFA)**: Enforcing strict access controls for administrative accounts  
 
-#### Amazon Q Developer
+#### Threat Detection & Monitoring
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- **API Auditing**: Tracking account activity and resource changes using Amazon CloudTrail  
+- **Intelligent Threat Detection**: Discovering malicious behavior and unauthorized activities with Amazon GuardDuty  
+- **Proactive Alerting**: Setting up Amazon CloudWatch alarms for anomaly detection and rapid incident response  
 
 ### Key Takeaways
 
 #### Design Mindset
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+- **Security by Design**: Always integrate security from the initial architectural design phase rather than treating it as an afterthought  
+- **Zero Trust Philosophy**: Never trust implicitly, always verify every request and connection within the system  
+- **Risk Mitigation**: Identifying vulnerabilities early to prevent costly security incidents post-deployment  
 
 #### Technical Architecture
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+- **Subnet segregation technique**: Practical method for isolating application logic and databases from public exposure  
+- Use **IAM roles and policies** instead of embedding long-term credentials in application code  
+- **Encryption enforcement**: Securing data via AWS KMS across all storage and communication layers  
 
-#### Modernization Strategy
+#### Compliance Strategy
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- **Continuous monitoring**: Maintaining visibility across all cloud resources to ensure policy compliance  
+- **Automated remediation**: Leveraging AWS native tools to automatically respond to detected security threats  
+- **Audit readiness**: Keeping comprehensive logs to meet industry regulatory standards easily  
 
 ### Applying to Work
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **Secure backend deployment**: Place all Amazon EC2 instances and databases within Private Subnets to isolate them from the public internet  
+- **Refactor credential handling**: Remove hardcoded access keys and implement secure IAM Roles for instance-to-service communication  
+- **Implement firewall rules**: Configure strict Security Groups to restrict traffic only to required ports and IP ranges  
+- **Enable encryption**: Activate encryption at rest for Amazon S3 buckets and Amazon RDS storage  
+- **Deploy monitoring tools**: Integrate Amazon CloudTrail and CloudWatch alerts into the development and deployment workflow  
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Attending the **“Cloud Security & Best Practices”** workshop was extremely valuable, giving me a comprehensive view of securing cloud applications and data using advanced AWS security mechanisms. Key experiences included:
 
 #### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+- Experts from AWS and enterprise security fields shared **best practices** in cloud infrastructure protection.  
+- Through real-world incident case studies, I gained a deeper understanding of applying **defense-in-depth** principles to complex projects.  
 
 #### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+- Participating in **network isolation and IAM policy** configuration exercises helped me visualize how to structure secure cloud environments.  
+- Learned how to **configure VPC subnets**, manage security groups, and enforce least-privilege access.  
+- Understood the operational mechanics of encryption keys and threat detection services like GuardDuty.  
 
 #### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+- Explored **AWS WAF and KMS**, essential tools for web traffic filtering and cryptographic data protection.  
+- Learned to **automate audit tracking** with CloudTrail to improve overall system transparency and security posture.  
 
 #### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+- The workshop offered opportunities to exchange security strategies with peers and industry experts, emphasizing shared compliance challenges.  
+- Real-world threat examples reinforced the importance of proactive security modeling over reactive patching.  
 
 #### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+- Proper network segmentation and identity management drastically reduce the **attack surface** of any web application.  
+- Security is a continuous process that requires constant monitoring, log auditing, and adherence to established compliance baselines.  
+- Utilizing native AWS security services significantly reduces the engineering overhead required to maintain enterprise-grade safety.  
+ 
 
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, the event not only provided vital technical knowledge on cloud security but also transformed my perspective on engineering reliable, resilient, and deeply protected applications.
