@@ -1,5 +1,5 @@
 ---
-title: "Backend Development & Cloud Deployment"
+title: "Workshop"
 date: 2026-07-22
 weight: 5
 chapter: false
