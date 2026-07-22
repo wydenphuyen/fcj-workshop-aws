@@ -1,44 +1,41 @@
 ---
-title: "Internship Report"
+title: "Báo cáo thực tập"
 date: 2024-01-01
 weight: 1
 chapter: false
 ---
 
-    
-# Internship Report
+# Báo cáo thực tập
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-### Student Information:
-&emsp; **Full Name:** Nguyen Van A
 
-&emsp; **Phone Number:** 0989888999 
+### Thông tin sinh viên:
+&emsp; **Họ và tên:** Bùi Khôi Nguyên
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Số điện thoại:** 0941362439
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **Email:** buikhoinguyen2004@gmail.com
 
-&emsp; **Major:** Information Technology
+&emsp; **Trường Đại học:** Trường Đại học Công nghệ Thành phố Hồ Chí Minh 
 
-&emsp; **Class:** AWS082025
+&emsp; **Ngành học:** Công nghệ Thông tin
 
-&emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
+&emsp; **Lớp:** 22DTHG4
 
-&emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Việt Nam
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-![Your profile picture](/images/avatar.png)
+&emsp; **Thời gian thực tập:** Từ 23/04/2026 đến 30/07/2026
 
-### Report Content
+![Ảnh đại diện của bạn](/images/avatar.png)
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+### Nội dung báo cáo
+
+1. &nbsp;[Nhật ký công việc](1-Worklog/)
+2. &nbsp;[Đề xuất dự án](2-Proposal/)
+3. &nbsp;[Bài viết Blog](3-BlogsPosted/)
+4. &nbsp;[Sự kiện đã tham gia](4-EventParticipated/)
+5. &nbsp;[Hội thảo](5-Workshop/)
+6. &nbsp;[Tự đánh giá](6-Self-evaluation/)
+7. &nbsp;[Chia sẻ và Đóng góp](7-Feedback/)
