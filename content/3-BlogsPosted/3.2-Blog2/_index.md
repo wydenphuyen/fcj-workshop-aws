@@ -10,7 +10,7 @@ pre: " <b> 3.2. </b> "
 
 Tiếp nối bài viết tổng quan, bài này sẽ đi sâu vào cách hệ thống xử lý các yêu cầu (request) từ người dùng. Hệ thống được thiết kế để tách biệt rõ ràng giữa xử lý tĩnh và xử lý động.
 
-![Sơ đồ kiến trúc AWS](/images/2-Proposal/kien-truc-aws.jpg)
+![Sơ đồ kiến trúc AWS](/fcj-workshop-aws/images/2-Proposal/kien-truc-aws.jpg)
 
 ### Quy trình xử lý request:
 1. **Tiếp nhận & Định tuyến:** Khi người dùng truy cập, **Amazon Route 53** sẽ đảm nhiệm việc phân giải tên miền. Cùng lúc đó, **AWS WAF** sẽ kiểm tra và chặn các truy cập độc hại.

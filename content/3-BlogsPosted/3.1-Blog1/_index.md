@@ -12,6 +12,4 @@ Dưới đây là sơ đồ kiến trúc hệ thống triển khai trên nền t
 
 Hệ thống tách biệt rõ ràng giữa luồng xử lý giao diện (Frontend), logic nghiệp vụ (Backend) và cơ sở dữ liệu (Database), đồng thời tích hợp các cơ chế bảo mật, giám sát và lưu trữ đám mây.
 
-![Sơ đồ kiến trúc AWS](/images/2-Proposal/kien-truc-aws.jpg)
-
-*(Lưu ý: Bạn nhớ đảm bảo file ảnh sơ đồ đã được lưu đúng vào thư mục `static/images/2-Proposal/` với tên `kien-truc-aws.jpg` như mình hướng dẫn ở bước trước nhé. Nếu bạn lưu tên khác, hãy sửa lại tên file trong đoạn mã trên).*
+![Sơ đồ kiến trúc AWS](/fcj-workshop-aws/images/2-Proposal/kien-truc-aws.jpg)

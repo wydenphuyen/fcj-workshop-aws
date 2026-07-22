@@ -10,7 +10,7 @@ pre: " <b> 3.3. </b> "
 
 Để một hệ thống web hoạt động ổn định và an toàn, kiến trúc này đã áp dụng các cơ chế quan trọng về mạng và giám sát tự động.
 
-![Sơ đồ kiến trúc AWS](/images/2-Proposal/kien-truc-aws.jpg)
+![Sơ đồ kiến trúc AWS](/fcj-workshop-aws/images/2-Proposal/kien-truc-aws.jpg)
 
 ### 1. Bảo mật bằng Private Subnet
 Như trên sơ đồ, toàn bộ các máy chủ xử lý logic (**Amazon EC2**) và hệ quản trị cơ sở dữ liệu (**Amazon RDS/DynamoDB**) đều được đặt trong **Private Subnet** (màu xanh nhạt). Điều này có nghĩa là chúng bị cách ly hoàn toàn khỏi Internet công cộng. Hacker không thể truy cập trực tiếp vào các máy chủ này, giúp dữ liệu được bảo vệ nghiêm ngặt.
