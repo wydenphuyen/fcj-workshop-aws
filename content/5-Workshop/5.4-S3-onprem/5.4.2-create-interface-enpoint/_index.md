@@ -1,43 +1,30 @@
 ---
 title : "Create an S3 Interface endpoint"
-date : 2024-01-01
-weight : 2
+date : 2026-07-22 
+weight : 2 
 chapter : false
-pre : " <b> 5.4.2 </b> "
+pre: " <b> 5.4.2. </b> "
 ---
 
-In this section you will create and test an S3 interface endpoint using the simulated on-premises environment deployed as part of this workshop.
+### Tạo S3 Interface Endpoint
 
-1. Return to the Amazon VPC menu. In the navigation pane, choose Endpoints, then click Create Endpoint.
+Trong phần này, chúng ta sẽ tiến hành tạo một S3 Interface Endpoint sử dụng môi trường mạng on-premises đã được giả lập.
 
-2. In Create endpoint console:
-+ Name the interface endpoint
-+ In Service category, choose **aws services** 
+#### Các bước thực hiện chi tiết:
 
-![name](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint1.png)
+1. Quay lại menu **Amazon VPC**, ở thanh điều hướng bên trái chọn **Endpoints**, sau đó nhấn **Create Endpoint**.
+2. Tại giao diện cấu hình Endpoint:
+   * **Name:** Đặt tên cho interface endpoint của bạn.
+   * **Service category:** Chọn **AWS services**.
 
-3.  In the Search box, type S3 and press Enter. Select the endpoint named com.amazonaws.us-east-1.s3. Ensure that the Type column indicates Interface.
+3. Tại ô tìm kiếm dịch vụ (Search), gõ `s3` và nhấn Enter. Chọn dịch vụ có tên dạng `com.amazonaws.[region].s3` (ví dụ: `com.amazonaws.us-east-1.s3`) và đảm bảo cột **Type** hiển thị là **Interface**.
 
-![service](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint2.png)
+4. Tại mục **VPC**, chọn **VPC Cloud** từ danh sách thả xuống.
 
-4. For VPC, select VPC Cloud from the drop-down.
-{{% notice warning %}}
-Make sure to choose "VPC Cloud" and not "VPC On-prem"
-{{% /notice %}}
-+ Expand **Additional settings** and ensure that Enable DNS name is *not* selected (we will use this in the next part of the workshop)
+> **⚠️ Warning:** Hãy chắc chắn bạn chọn **"VPC Cloud"** và **không** chọn **"VPC On-prem"**.
 
-![vpc](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint3.png)
+5. Mở rộng phần **Additional settings** và đảm bảo tùy chọn **Enable DNS name** **không** được tích chọn (chúng ta sẽ cấu hình phần này ở các bước tiếp theo của workshop).
 
-5. Select 2 subnets in the following AZs: us-east-1a and us-east-1b
+6. Chọn **2 Subnets** nằm trong các vùng khả dụng tương ứng theo yêu cầu lab (ví dụ: `us-east-1a` và `us-east-1b`).
 
-![subnets](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint4.png)
-
-6. For Security group, choose SGforS3Endpoint:
-
-![sg](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint5.png)
-
-7. Keep the default policy - full access and click Create endpoint
-
-![success](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint-success.png)
-
-Congratulation on successfully creating S3 interface endpoint. In the next step, we will test the interface endpoint.
+7. Tại mục **Security groups**, chọn Security Group tương ứng cho phép kết nối đến endpoint, sau đó nhấn **Create endpoint** ở cuối trang để hoàn tất.

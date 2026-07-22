@@ -1,57 +1,38 @@
 ---
-title : "Prepare the environment"
-date : 2024-01-01
-weight : 1
+title : "Prepare the Environment"
+date : 2026-07-22 
+weight : 1 
 chapter : false
-pre : " <b> 5.4.1 </b> "
+pre: " <b> 5.4.1. </b> "
 ---
 
-To prepare for this part of the workshop you will need to:
-+ Deploying a CloudFormation stack 
-+ Modifying a VPC route table. 
+### Chuẩn bị môi trường mô phỏng On-Premises và DNS
 
-These components work together to simulate on-premises DNS forwarding and name resolution.
+Để thực hiện phần thực hành truy cập Amazon S3 từ môi trường mạng nội bộ giả lập (on-premises), chúng ta cần chuẩn bị các thành phần cơ sở hạ tầng mạng và phân giải tên miền (DNS).
 
-#### Deploy the CloudFormation stack
+#### Các bước chuẩn bị chính:
+* Triển khai cấu hình hạ tầng thông qua **CloudFormation Stack**.
+* Cập nhật và điều chỉnh bảng định tuyến **VPC Route Table**.
 
-The CloudFormation template will create additional services to support an on-premises simulation:
-+ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3 endpoint
-+ One Route 53 Inbound Resolver endpoint that enables "VPC Cloud" to resolve inbound DNS resolution requests to the Private Hosted Zone
-+ One Route 53 Outbound Resolver endpoint that enables "VPC On-prem" to forward DNS requests for S3 to "VPC Cloud"
+---
 
-![route 53 diagram](/images/5-Workshop/5.4-S3-onprem/route53.png)
+### 1. Triển khai CloudFormation Stack
 
-1. Click the following link to open the [AWS CloudFormation console](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/reinvent-endpoints-builders-session/R53CF.yaml&stackName=PLOnpremSetup). The required template will be pre-loaded into the menu. Accept all default and click Create stack.
+Mẫu CloudFormation sẽ tự động khởi tạo các dịch vụ hỗ trợ mô phỏng mạng on-premises:
+* **Route 53 Private Hosted Zone:** Lưu trữ các bản ghi Alias trỏ tới PrivateLink S3 endpoint.
+* **Route 53 Inbound Resolver Endpoint:** Cho phép "VPC Cloud" tiếp nhận các yêu cầu phân giải DNS từ mạng nội bộ.
+* **Route 53 Outbound Resolver Endpoint:** Giúp "VPC On-prem" chuyển tiếp các yêu cầu phân giải DNS của S3 sang hệ thống "VPC Cloud".
 
-![Create stack](/images/5-Workshop/5.4-S3-onprem/create-stack.png)
+#### Các bước thực hiện trên AWS Console:
+1. Truy cập vào giao diện quản trị **AWS CloudFormation console**.
+2. Tải và cấu hình mẫu template triển khai tự động các tài nguyên mạng.
+3. Nhấn **Create stack** để hệ thống tự động khởi tạo toàn bộ hạ tầng (Quá trình này mất khoảng vài phút).
 
-![Button](/images/5-Workshop/5.4-S3-onprem/create-stack-button.png)
+---
 
-It may take a few minutes for stack deployment to complete. You can continue with the next step without waiting for the deployemnt to finish.
+### 2. Cập nhật On-premise Private Route Table
 
-#### Update on-premise private route table
-
-This workshop uses a strongSwan VPN running on an EC2 instance to simulate connectivty between an on-premises datacenter and the AWS cloud. Most of the required components are provisioned before your start. To finalize the VPN configuration, you will modify the "VPC On-prem" routing table to direct traffic destined for the cloud to the strongSwan VPN instance.
-
-1. Open the Amazon EC2 console 
-
-2. Select the instance named infra-vpngw-test. From the Details tab, copy the Instance ID and paste this into your text editor
-
-![ec2 id](/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png)
-
-3. Navigate to the VPC menu by using the Search box at the top of the browser window.
-
-4. Click on Route Tables, select the RT Private On-prem route table, select the Routes tab, and click Edit Routes.
-
-![rt](/images/5-Workshop/5.4-S3-onprem/rt.png)
-
-5. Click Add route.
-+ Destination: your Cloud VPC cidr range
-+ Target: ID of your infra-vpngw-test instance (you saved in your editor at step 1)
-
-![add route](/images/5-Workshop/5.4-S3-onprem/add-route.png)
-
-6. Click Save changes
-
-
-
+Để hoàn tất kết nối định tuyến giữa trung tâm dữ liệu giả lập (on-premises datacenter) và môi trường đám mây AWS thông qua mô đun VPN:
+1. Truy cập vào **Amazon EC2 Console**.
+2. Tìm kiếm và chọn instance có tên **`infra-vpngw-test`**.
+3. Tại tab **Details**, sao chép lại mã định danh **Instance ID** để cấu hình bảng định tuyến `VPC On-prem` hướng lưu lượng truy cập cloud đi qua strongSwan VPN instance.
