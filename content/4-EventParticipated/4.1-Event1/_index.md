@@ -1,248 +1,57 @@
 ---
-
-title: "Event 1"
-
-date: 2024-01-01
-
+title: "Event 1: Giới thiệu về chương trình AWS và Định hướng Phát triển"
+date: 2026-09-05
 weight: 1
-
 chapter: false
-
 pre: " <b> 4.1. </b> "
-
 ---
 
 
 
-{{% notice warning %}}
+# Summary Report: Giới thiệu về chương trình AWS và Định hướng Phát triển
 
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
+### Thông tin sự kiện
+- **Tên sự kiện:** Giới thiệu về chương trình AWS và Định hướng Phát triển
+- **Ngày diễn ra:** 05/09/2026
+- **Vai trò:** Người tham dự (Attendee)
 
-{{% /notice %}}
+### Mục tiêu sự kiện
+- Cung cấp cái nhìn toàn diện về lộ trình chương trình thực tập và phát triển năng lực công nghệ điện toán đám mây.
+- Giới thiệu tầm quan trọng, xu hướng dịch chuyển công nghệ lên nền tảng AWS trong môi trường doanh nghiệp hiện đại.
+- Định hướng rõ ràng các kỹ năng cốt lõi và lộ trình thực hiện đồ án, dự án tốt nghiệp cho sinh viên ngành Công nghệ phần mềm.
 
+### Nội dung chính
 
+#### 1. Tổng quan về hệ sinh thái và dịch vụ AWS
+- Giới thiệu cấu trúc hạ tầng toàn cầu của Amazon Web Services (AWS).
+- Tìm hiểu các nhóm dịch vụ cốt lõi phục vụ phát triển ứng dụng web: dịch vụ tính toán (EC2), lưu trữ (S3), cơ sở dữ liệu (RDS) và mạng ảo (VPC).
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+#### 2. Định hướng lộ trình thực tập và phát triển kỹ năng
+- Nắm bắt các mốc thời gian và yêu cầu trọng tâm trong suốt quá trình tham gia chương trình.
+- Định hướng phương pháp tiếp cận công nghệ theo tiêu chuẩn thực tế tại doanh nghiệp (Industry Standards).
+- Hướng dẫn cách phân chia các tầng kiến trúc hệ thống (Frontend, Backend, Database) nhằm chuẩn bị cho việc xây dựng đồ án.
 
+#### 3. Phương pháp học tập và làm việc hiệu quả trên Cloud
+- Chia sẻ kinh nghiệm từ các chuyên gia về cách tối ưu hóa thời gian nghiên cứu tài liệu chính thống của AWS.
+- Lưu ý về các quy tắc bảo mật cơ bản và quản lý chi phí khi vận hành tài nguyên trên đám mây.
 
+---
 
-### Event Objectives
+### Giá trị thu được & Bài học cốt lõi
 
+#### Định hướng tư duy kỹ thuật
+- Hiểu rõ lý do tại sao các doanh nghiệp công nghệ lớn lại lựa chọn điện toán đám mây thay vì hạ tầng máy chủ vật lý truyền thống.
+- Xây dựng tư duy thiết kế hệ thống có tính sẵn sàng cao (High Availability) và khả năng mở rộng linh hoạt (Scalability).
 
+#### Chuẩn bị cho dự án cá nhân / Đồ án tốt nghiệp
+- Định hình được sơ đồ kiến trúc tổng quan mà dự án web cần hướng tới (ví dụ: mô hình 3 tầng với VPC, Public/Private Subnet).
+- Nắm bắt phương pháp quản lý mã nguồn và triển khai tự động hóa thông qua các công cụ CI/CD tích hợp trên nền tảng Cloud.
 
-- Share best practices in modern application design
+### Trải nghiệm tham gia sự kiện
 
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
+Tham gia buổi giới thiệu và định hướng đã giúp tôi gỡ bỏ nhiều thắc mắc ban đầu khi tiếp cận với môi trường công nghệ điện toán đám mây quy mô lớn. Sự kiện mang lại những góc nhìn thực tế, giúp tôi vạch ra kế hoạch cụ thể cho từng giai đoạn của kỳ thực tập cũng như việc hoàn thiện cấu trúc hệ thống cho đồ án sắp tới.
 
-- Provide guidance on selecting the right compute services
+#### Hình ảnh sự kiện
+*(Thêm hình ảnh sự kiện của bạn tại đây)*
 
-- Present AI tools to support the development lifecycle
-
-
-
-### Speakers
-
-
-
-- **Jignesh Shah** – Director, Open Source Databases
-
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
-
-
-
-### Key Highlights
-
-
-
-#### Identifying the drawbacks of legacy application architecture
-
-
-
-- Long product release cycles → Lost revenue/missed opportunities  
-
-- Inefficient operations → Reduced productivity, higher costs  
-
-- Non-compliance with security regulations → Security breaches, loss of reputation  
-
-
-
-#### Transitioning to modern application architecture – Microservices
-
-
-
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
-
-
-
-- **Queue Management**: Handle asynchronous tasks  
-
-- **Caching Strategy**: Optimize performance  
-
-- **Message Handling**: Flexible inter-service communication  
-
-
-
-#### Domain-Driven Design (DDD)
-
-
-
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-
-- **Bookstore case study**: Demonstrates real-world DDD application  
-
-- **Context mapping**: 7 patterns for integrating bounded contexts  
-
-
-
-#### Event-Driven Architecture
-
-
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-
-- **Benefits**: Loose coupling, scalability, resilience  
-
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-
-
-#### Compute Evolution
-
-
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-
-
-#### Amazon Q Developer
-
-
-
-- **SDLC automation**: From planning to maintenance  
-
-- **Code transformation**: Java upgrade, .NET modernization  
-
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-
-
-### Key Takeaways
-
-
-
-#### Design Mindset
-
-
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-
-
-#### Technical Architecture
-
-
-
-- **Event storming technique**: Practical method for modeling business processes  
-
-- Use **event-driven communication** instead of synchronous calls  
-
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-
-
-#### Modernization Strategy
-
-
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-
-- **7Rs framework**: Multiple modernization paths depending on the application  
-
-- **ROI measurement**: Cost reduction + business agility  
-
-
-
-### Applying to Work
-
-
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-
-
-### Event Experience
-
-
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-
-
-#### Learning from highly skilled speakers
-
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-
-
-#### Hands-on technical exposure
-
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-
-
-#### Leveraging modern tools
-
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-
-
-#### Networking and discussions
-
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-
-
-#### Lessons learned
-
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-
-
-
-
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> **Đánh giá chung:** Buổi sự kiện đóng vai trò là kim chỉ nam quan trọng, giúp tôi định hình rõ ràng mục tiêu học tập, nắm bắt đúng xu hướng công nghệ và tự tin hơn trong suốt quá trình triển khai các nội dung thực tập tiếp theo.

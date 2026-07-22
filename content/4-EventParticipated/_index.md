@@ -5,9 +5,7 @@ weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** Thông tin dưới đây dùng để tham khảo. Vui lòng không sao chép nguyên văn hoàn toàn cho báo cáo của bạn.
-{{% /notice %}}
+
 
 Trong phần này, tôi xin tổng hợp và mô tả chi tiết các sự kiện và buổi workshop công nghệ mà tôi đã tham gia trong suốt quá trình thực tập tốt nghiệp.
 

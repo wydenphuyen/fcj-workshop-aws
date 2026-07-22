@@ -5,9 +5,7 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** Thông tin dưới đây dùng để tham khảo. Vui lòng không sao chép nguyên văn hoàn toàn cho báo cáo của bạn.
-{{% /notice %}}
+
 
 Trong phần này, bạn cần tổng hợp nội dung của hội thảo/đề án mà bạn **dự định** thực hiện.
 

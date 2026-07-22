@@ -5,9 +5,7 @@ weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** Thông tin dưới đây dùng để tham khảo. Vui lòng không sao chép nguyên văn hoàn toàn cho báo cáo của bạn.
-{{% /notice %}}
+
 
 Phần này tổng hợp các bài viết kỹ thuật (Blog) đã chia sẻ trên AWS Study Group về quá trình thiết kế và triển khai hệ thống Web Application trên AWS.
 
