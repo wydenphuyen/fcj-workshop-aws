@@ -1,47 +1,45 @@
 ---
-title: "Sharing and Feedback"
+title: "Chia sẻ và Đóng góp"
 date: 2024-01-01
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
 
-### Overall Evaluation
+> Phần này tổng hợp những cảm nhận và đánh giá chân thực của cá nhân trong suốt quá trình tham gia chương trình thực tập. Những ý kiến dưới đây nhằm mục đích đóng góp mang tính xây dựng để ban tổ chức nâng cao chất lượng chương trình cho các thế hệ tiếp theo:
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+### Đánh giá tổng quan
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+**1. Môi trường làm việc**  
+Không gian làm việc mang phong cách hiện đại, năng động và chuyên nghiệp. Các thành viên luôn giữ thái độ cởi mở, sẵn sàng trao đổi kỹ thuật thẳng thắn mà không có khoảng cách. Nhịp độ làm việc tập trung cao độ nhưng vẫn giữ được sự thoải mái, giúp tôi dễ dàng thích nghi và phát huy tối đa khả năng sáng tạo của bản thân.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**2. Sự đồng hành từ Mentor và Ban quản lý (Admin)**  
+Mentor thể hiện sự tận tâm rất lớn trong suốt quá trình định hướng, không chỉ cung cấp đáp án mà luôn đặt câu hỏi gợi mở để tôi tự tư duy giải quyết vấn đề. Đội ngũ admin hỗ trợ thủ tục hành chính, cung cấp tài liệu và điều phối công việc cực kỳ nhanh chóng, gọn gàng, tạo mọi điều kiện thuận lợi nhất để thực tập sinh yên tâm làm dự án.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+**3. Sự phù hợp giữa công việc và chuyên ngành học**  
+Nội dung công việc và các bài lab thực tế bám sát rất chặt với các xu hướng công nghệ mới hiện nay trong ngành Công nghệ phần mềm. Những kiến thức về hạ tầng đám mây, kiến trúc hệ thống và bảo mật giúp tôi kết nối hoàn hảo giữa lý thuyết hàn lâm trên giảng đường và bài toán vận hành thực tế tại doanh nghiệp.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**4. Cơ hội học tập & phát triển kỹ năng**  
+Kỳ thực tập mang lại cơ hội lớn để tôi hoàn thiện cả kỹ năng chuyên môn (Cloud, cơ sở dữ liệu, tối ưu hóa hệ thống) lẫn kỹ năng mềm (quản lý thời gian cá nhân, cách thuyết trình ý tưởng kỹ thuật và tư duy làm việc nhóm hiệu quả).
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+**5. Văn hóa công ty & Tinh thần đồng đội**  
+Văn hóa lấy tinh thần trách nhiệm (ownership) làm cốt lõi: mọi người đều chủ động hoàn thành phần việc của mình và sẵn sàng hỗ trợ đồng đội khi gặp sự cố kỹ thuật khó khăn. Điều này tạo cho tôi cảm giác thuộc về một tập thể thực sự chứ không chỉ đơn thuần là một thực tập sinh đến làm việc ngắn hạn.
+
+**6. Chính sách & Quyền lợi**  
+Chế độ đãi ngộ hợp lý cùng với sự linh hoạt về thời gian làm việc đã giúp tôi chủ động cân đối tốt giữa lịch học ở trường và tiến độ công việc tại công ty.
 
 ---
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+### Câu hỏi phản hồi bổ sung
+- **Điều hài lòng nhất:** Được tự tay thiết kế và triển khai một hệ thống hoàn chỉnh lên nền tảng đám mây AWS, qua đó trực tiếp nhìn thấy sự trưởng thành trong tư duy lập trình và kiến trúc của bản thân.
+- **Điểm cần cải thiện:** Có thể tăng cường thêm các buổi thảo luận chuyên sâu dạng giải quyết sự cố thực tế (post-mortem analysis) từ các dự án quy mô lớn để tích lũy thêm kinh nghiệm xử lý tình huống khẩn cấp.
+- **Đánh giá giới thiệu:** Hoàn toàn sẵn sàng giới thiệu chương trình này cho các bạn sinh viên khóa dưới vì đây là môi trường bước đệm chất lượng cao cho sự nghiệp lập trình viên.
 
 ---
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+### Góp ý & Kỳ vọng
+- **Đề xuất cải thiện:** Bổ sung thêm các biểu mẫu chuẩn hóa về tài liệu thiết kế kiến trúc (Architecture Diagram) để định hướng cho sinh viên từ những tuần đầu tiên.
+- **Định hướng tương lai:** Rất mong muốn tiếp tục giữ mối liên hệ gắn bó và có cơ hội đồng hành lâu dài cùng hệ sinh thái công nghệ của đơn vị trong tương lai.
+- **Ý kiến tự do khác:** Xin gửi lời cảm ơn chân thành đến toàn thể ban tổ chức, mentor và các bạn đồng nghiệp đã đồng hành, hỗ trợ tôi hoàn thành trọn vẹn kỳ thực tập này.
