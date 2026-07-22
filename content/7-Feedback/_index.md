@@ -28,7 +28,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ 23/04/2026 đến 30/07/2026
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](/fcj-workshop-aws/images/2-Proposal/avatar.jpg)
 
 ### Nội dung báo cáo
 
