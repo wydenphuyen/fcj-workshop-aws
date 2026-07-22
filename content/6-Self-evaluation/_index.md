@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Thông tin dưới đây chỉ mang tính chất tham khảo. Vui lòng **không sao chép nguyên văn** vào báo cáo của bạn, bao gồm cả cảnh báo này.
-{{% /notice %}}
+
 
 Trong suốt thời gian thực tập tại **[Tên Công ty/Tổ chức]** từ **[ngày bắt đầu]** đến **[ngày kết thúc]**, tôi đã có cơ hội học tập, thực hành và áp dụng những kiến thức đã học ở nhà trường vào môi trường làm việc thực tế.  
 Tôi đã tham gia vào **[mô tả ngắn gọn dự án hoặc nhiệm vụ chính]**, qua đó tôi đã nâng cao các kỹ năng của mình trong **[liệt kê các kỹ năng: lập trình, phân tích, báo cáo, giao tiếp, v.v.]**.  
