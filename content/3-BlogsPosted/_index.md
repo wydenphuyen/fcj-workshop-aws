@@ -1,22 +1,25 @@
 ---
 title: "Blogs Posted"
-date: 2024-01-01
+date: 2026-04-20
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
-
 {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+⚠️ **Note:** Thông tin dưới đây dùng để tham khảo. Vui lòng không sao chép nguyên văn hoàn toàn cho báo cáo của bạn.
 {{% /notice %}}
 
-This section will list and introduce the blogs you have posted to [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). For example:
+Phần này tổng hợp các bài viết kỹ thuật (Blog) đã chia sẻ trên AWS Study Group về quá trình thiết kế và triển khai hệ thống.
 
-###  [Blog 1 - SESSION POLICIES IN AMAZON EKS POD IDENTITY](3.1-Blog1/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+---
 
-###  [Blog 2 - ...](3.2-Blog2/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+## Danh sách các bài viết Blog đã đăng:
 
-###  [Blog 3 - ...](3.3-Blog3/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+### [3.1. Tổng quan kiến trúc AWS đề xuất](./3.1-tong-quan-kien-truc-aws-de-xuat/)
+* **Tóm tắt nội dung:** Bài viết giới thiệu tổng quan về mô hình kiến trúc 3 tầng (3-Tier Architecture) được áp dụng cho dự án doanh nghiệp. Phân tích cách phân tách rõ ràng giữa tầng giao diện (Frontend trên S3/CloudFront), tầng xử lý logic (Backend trên EC2/ASG/ALB) và tầng lưu trữ dữ liệu (RDS/DynamoDB) nhằm đảm bảo tính bảo mật và khả năng mở rộng.
+
+### [3.2. Blog 2: Phân tích chi tiết luồng xử lý dữ liệu](./3.2-phan-tich-chi-tiet-luong-xu-ly-du-lieu/)
+* **Tóm tắt nội dung:** Đi sâu phân tích hành trình của một request từ người dùng đi qua hệ thống phân giải tên miền Route 53, qua CDN CloudFront, chạm tới Application Load Balancer để phân phối vào các máy chủ EC2 trong Private Subnet, và cách hệ thống truy vấn dữ liệu an toàn xuống Amazon RDS và DynamoDB.
+
+### [3.3. Blog 3: Bảo mật và Tự động mở rộng (Auto Scaling)](./3.3-bao-mat-va-tu-dong-mo-rong-auto-scaling/)
+* **Tóm tắt nội dung:** Trình bày giải pháp cấu hình Auto Scaling Group (ASG) để tự động co giãn tài nguyên khi lượng truy cập biến động, kết hợp với các biện pháp bảo mật như IAM Roles, Security Groups, VPC Isolation và giám sát hệ thống thời gian thực bằng Amazon CloudWatch.
