@@ -1,126 +1,103 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
+title: "Event 2: GenAI-powered App-DB Modernization workshop"
+date: 2026-09-30
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
 {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
+⚠️ **Note:** Thông tin dưới đây dùng để tham khảo. Vui lòng không sao chép nguyên văn hoàn toàn cho báo cáo của bạn.
 {{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Báo cáo tóm tắt: Hội thảo “GenAI-powered App-DB Modernization”
 
-### Event Objectives
+### Mục tiêu sự kiện
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Chia sẻ các phương pháp hay nhất (best practices) trong thiết kế ứng dụng hiện đại.
+- Giới thiệu Thiết kế Hướng miền (Domain-Driven Design - DDD) và kiến trúc hướng sự kiện (Event-driven Architecture).
+- Cung cấp hướng dẫn chi tiết về cách lựa chọn các dịch vụ tính toán (compute services) phù hợp.
+- Trình bày các công cụ AI hỗ trợ toàn bộ vòng đời phát triển phần mềm (SDLC).
 
-### Speakers
+### Diễn giả chính
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Jignesh Shah** – Giám đốc Cơ sở dữ liệu Mã nguồn mở
+- **Erica Liu** – Chuyên gia GTM Cấp cao, AppMod
+- **Fabrianne Effendi** – Chuyên gia Hỗ trợ Kỹ thuật, Serverless Amazon Web Services
 
-### Key Highlights
+### Các điểm nổi bật chính
 
-#### Identifying the drawbacks of legacy application architecture
+#### Nhược điểm của kiến trúc ứng dụng truyền thống (Legacy)
+- Vòng đời phát hành sản phẩm kéo dài dẫn đến thất thu và bỏ lỡ cơ hội thị trường.
+- Vận hành kém hiệu quả làm giảm năng suất và đẩy chi phí lên cao.
+- Không tuân thủ các quy định bảo mật gây ra các sự cố lộ dữ liệu và tổn hại uy tín.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+#### Chuyển đổi sang kiến trúc ứng dụng hiện đại – Microservices
+Chuyển đổi sang hệ thống dạng mô-đun — trong đó mỗi chức năng là một **dịch vụ độc lập** giao tiếp thông qua **các sự kiện**, được xây dựng trên 3 trụ cột cốt lõi:
+- **Quản lý hàng đợi (Queue Management):** Xử lý các tác vụ bất đồng bộ hiệu quả.
+- **Chiến lược bộ nhớ đệm (Caching Strategy):** Tối ưu hóa hiệu năng hệ thống.
+- **Xử lý thông điệp (Message Handling):** Đảm bảo giao tiếp linh hoạt giữa các dịch vụ.
 
-#### Transitioning to modern application architecture – Microservices
+#### Thiết kế Hướng miền (Domain-Driven Design - DDD)
+- **Phương pháp 4 bước:** Xác định sự kiện miền → sắp xếp dòng thời gian → xác định các tác nhân → định nghĩa bối cảnh giới hạn (bounded contexts).
+- **Nghiên cứu tình huống nhà sách:** Minh họa ứng dụng thực tế của mô hình DDD.
+- **Ánh xạ bối cảnh (Context mapping):** 7 mẫu thiết kế để tích hợp các bối cảnh giới hạn.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### Kiến trúc Hướng Sự kiện (Event-Driven Architecture)
+- **3 mô hình tích hợp:** Publish/Subscribe, Point-to-point, Streaming.
+- **Lợi ích:** Tính lỏng lẻo (loose coupling), khả năng mở rộng cao và tính chịu lỗi tốt.
+- **So sánh đồng bộ và bất đồng bộ:** Hiểu rõ các đánh đổi (trade-offs) trong kiến trúc.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
-
-#### Domain-Driven Design (DDD)
-
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
-
-#### Event-Driven Architecture
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+#### Sự tiến hóa của tính toán (Compute Evolution)
+- **Mô hình trách nhiệm chia sẻ:** Từ EC2, ECS, Fargate đến Lambda.
+- **Lợi ích của Serverless:** Không cần quản lý máy chủ, tự động mở rộng, trả phí theo giá trị sử dụng thực tế.
+- **Hàm (Functions) và Container:** Các tiêu chí lựa chọn giải pháp phù hợp.
 
 #### Amazon Q Developer
+- **Tự động hóa SDLC:** Hỗ trợ từ khâu lên ý tưởng, lập kế hoạch đến bảo trì hệ thống.
+- **Chuyển đổi mã nguồn:** Nâng cấp phiên bản Java, hiện đại hóa ứng dụng .NET.
+- **AWS Transform agents:** Hỗ trợ di chuyển từ VMware, Mainframe và .NET.
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+---
 
-### Key Takeaways
+### Bài học cốt lõi thu được
 
-#### Design Mindset
+#### Tư duy thiết kế (Design Mindset)
+- **Tiếp cận lấy kinh doanh làm trọng tâm:** Luôn bắt đầu từ nghiệp vụ kinh doanh thay vì chỉ chăm chăm vào công nghệ.
+- **Ngôn ngữ phổ quát (Ubiquitous language):** Tầm quan trọng của việc xây dựng từ vựng chung giữa đội ngũ kinh doanh và kỹ thuật.
+- **Bối cảnh giới hạn:** Nhận diện và quản lý độ phức tạp trong các hệ thống lớn.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+#### Kiến trúc kỹ thuật (Technical Architecture)
+- **Kỹ thuật Event storming:** Phương pháp thực tế để mô hình hóa các quy trình nghiệp vụ.
+- Ưu tiên sử dụng **giao tiếp hướng sự kiện** thay vì các lời gọi đồng bộ truyền thống.
+- **Mô hình tích hợp:** Biết rõ khi nào nên dùng đồng bộ, bất đồng bộ, pub/sub hay streaming.
 
-#### Technical Architecture
+#### Chiến lược hiện đại hóa (Modernization Strategy)
+- **Tiếp cận theo giai đoạn:** Không vội vã, tuân thủ theo lộ trình rõ ràng.
+- **Khung 7Rs:** Nhiều con đường hiện đại hóa tùy thuộc vào đặc thù của ứng dụng.
+- **Đo lường ROI:** Đánh giá hiệu quả dựa trên việc giảm chi phí kết hợp tăng tính linh hoạt trong kinh doanh.
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+---
 
-#### Modernization Strategy
+### Ứng dụng vào công việc và Đồ án thực tế
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- **Áp dụng DDD:** Đưa các buổi thảo luận event storming vào quy trình làm việc với nhóm.
+- **Tái cấu trúc Microservices:** Sử dụng các bối cảnh giới hạn để xác định ranh giới rõ ràng cho từng dịch vụ backend.
+- **Triển khai mô hình hướng sự kiện:** Thay thế một số lời gọi đồng bộ bằng hệ thống nhắn tin bất đồng bộ.
+- **Ứng dụng Serverless:** Thử nghiệm AWS Lambda cho các tác vụ phù hợp trong đồ án web 3 tầng.
+- **Trải nghiệm Amazon Q Developer:** Tích hợp công cụ AI vào quy trình phát triển để tăng năng suất lập trình.
 
-### Applying to Work
+---
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+### Trải nghiệm tham gia sự kiện
 
-### Event Experience
+Tham gia hội thảo **“GenAI-powered App-DB Modernization”** là một trải nghiệm cực kỳ giá trị, cung cấp cho tôi cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp, công cụ tiên tiến. Những điểm ấn tượng nhất bao gồm:
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+- **Học hỏi từ các chuyên gia hàng đầu:** Lắng nghe chia sẻ về các phương pháp hay nhất từ các chuyên gia AWS và các tổ chức công nghệ lớn.
+- **Tiếp cận kỹ thuật thực tế:** Tham gia các phiên thảo luận mô hình hóa quy trình nghiệp vụ và nắm bắt cách chia nhỏ microservices, phân định bối cảnh giới hạn.
+- **Tận dụng công cụ hiện đại:** Trải nghiệm thực tế Amazon Q Developer và tìm hiểu cách tự động hóa chuyển đổi mã nguồn để cải thiện hiệu suất.
+- **Bài học rút ra:** Việc áp dụng DDD và kiến trúc hướng sự kiện giúp giảm sự phụ thuộc lẫn nhau giữa các thành phần, đồng thời nâng cao khả năng mở rộng và độ ổn định cho toàn bộ hệ thống ứng dụng web.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### Hình ảnh sự kiện
+*(Thêm hình ảnh sự kiện của bạn tại đây)*
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
