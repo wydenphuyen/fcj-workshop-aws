@@ -1,31 +1,30 @@
 ---
-title: "Workshop"
-date: 2024-01-01
+title: "Backend Development & Cloud Deployment"
+date: 2026-07-22
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+
+
+# Phát triển Backend và Triển khai Hệ thống Engademy trên AWS
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+**Node.js và Amazon Web Services (AWS)** kết hợp với nhau cung cấp một nền tảng Backend mạnh mẽ, khả năng mở rộng cao và bảo mật để vận hành các ứng dụng học tập thông minh.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+Trong phần này, báo cáo trình bày quá trình xây dựng, cấu hình và vận hành hệ thống Backend cho ứng dụng Engademy từ môi trường phát triển cục bộ lên hệ thống đám mây chính thức.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+Hệ thống được chia thành các thành phần cốt lõi phục vụ xử lý nghiệp vụ và lưu trữ:
++ **Core Backend** - Xây dựng các RESTful APIs bằng Node.js và Express.js, kết nối cơ sở dữ liệu MongoDB để quản lý tài khoản, từ vựng và dữ liệu học tập.
++ **Cloud Infrastructure** - Triển khai ứng dụng trên máy chủ ảo Amazon EC2 (Ubuntu), quản lý tiến trình bằng PM2 và tích hợp dịch vụ lưu trữ tệp tin trên Amazon S3.
 
 #### Content
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+1. [Tổng quan kiến trúc Backend (Backend Overview)](#)
+2. [Cấu hình Môi trường và Cơ sở dữ liệu (Environment & Database)](#)
+3. [Quản lý mã nguồn với Git/GitHub (Version Control)](#)
+4. [Triển khai hệ thống lên Amazon EC2 (Cloud Deployment)](#)
+5. [Quản lý và Duy trì tiến trình với PM2 (Process Management)](#)
+6. [Tích hợp lưu trữ đám mây Amazon S3 (Cloud Storage Integration)](#)
